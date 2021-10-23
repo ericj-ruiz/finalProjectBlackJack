@@ -1,7 +1,10 @@
 package com.company.controllers;
 
+import javax.imageio.IIOException;
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -11,7 +14,7 @@ public class GetChart {
     private BufferedReader in;
     private String[] chart;
 
-    public GetWord() {
+    public GetChart() {
         try{
             Path thePath = Paths.get("src/" + "bsChart.txt");
 
