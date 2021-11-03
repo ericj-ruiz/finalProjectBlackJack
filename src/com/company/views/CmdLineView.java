@@ -8,12 +8,11 @@ public class CmdLineView {
     }
 
     public void greeting() {
-        System.out.println("Hello would you like to play?");
+        System.out.println("How much would you like to bet");
     }
-    public void promptBet(){
-        System.out.println("Place your bets:");
-    }
+
     public void promptDecision(){
         System.out.println("What decision would you like to make?");
     }
+    public void promptRaise(){System.out.println("How much would you like to raise:");}
 }
