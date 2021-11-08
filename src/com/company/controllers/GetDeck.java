@@ -11,7 +11,6 @@ import java.util.List;
 
 public class GetDeck {
     private String[] filledDeck;
-    private int[] usedDeck;
     private BufferedReader in;
 
     public GetDeck(){
@@ -51,11 +50,4 @@ public class GetDeck {
         return filledDeck;
     }
 
-    public int[] getUsedDeck() {
-        return usedDeck;
-    }
-
-    public void setUsedDeck(int[] usedDeck) {
-        this.usedDeck = usedDeck;
-    }
 }
