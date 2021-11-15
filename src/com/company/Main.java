@@ -27,16 +27,20 @@ public class Main {
         bankRoll-=pot;
         int uTotal=0;
         int hTotal=0;
-        for(int i =0;i<2;i++){
-            int user=deal();
-            uTotal+=user;
-            view.userCards(user);
-            int house=deal();
-            hTotal+=house;
-            view.houseCards(house);
-        }
-        //String decision = view.promptDecision();
+            int user1=deal();
+            int user2=deal();
+           uTotal= view.userCards(user1,user2,uTotal);
 
+            int house1=deal();
+            view.houseCards(house1);
+
+        String decision = view.promptDecision();
+        do{
+            uTotal+=decision(decision,uTotal);
+            if(uTotal<=21)
+                decision= view.promptDecision();
+            //put bust prompt check if total is bust
+        }while(decision!="Stand"//or total is bust);
 
 
 
@@ -64,4 +68,21 @@ public class Main {
             n = Integer.parseInt(card);
         return n;
     }
+
+    public static int decision(String decis, int total) {
+        CmdLineView view = new CmdLineView();
+        int t=0;
+        if (decis == "Hit") {
+            int user3 = deal();
+            total += view.hitCards(user3,total);
+            t=total;
+        }
+        else if(decis=="Stand"){
+            t=total;
+        }
+        else if(decis=="See Chart")
+
+        return t;
+    }
+
 }
