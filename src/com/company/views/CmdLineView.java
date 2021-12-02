@@ -22,7 +22,7 @@ public class CmdLineView {
     }
 
     public int promptDecision(){
-        System.out.println("What decision would you like to make? Enter 1 = Hit, 2 = Stand, 3 = See Chart?");
+        System.out.println("What decision would you like to make? Enter 1 = Hit, 2 = Stand");
         Scanner dec = new Scanner(System.in);
         int input= dec.nextInt();
         return input;

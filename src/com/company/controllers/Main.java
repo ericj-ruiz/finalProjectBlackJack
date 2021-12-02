@@ -123,10 +123,6 @@ public class Main {
         else if(decis== 2){
             t=total;
         }
-        else if(decis== 3)
-        {
-            t=total;
-        }
 
 
         return t;
