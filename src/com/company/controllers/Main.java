@@ -140,28 +140,18 @@ public class Main {
             int user3 = deal();
             int check =total;
             check+=user3;
-            if(check>21 && loopcheck==0)//once entered once it should stop
+            if(check>21 && loopcheck==0)
             {
                 if(u1==11||u2==11){
                     total-=10;
                     loopcheck=1;
                 }
-//check once  with user 1 or 11last hit and stand to see if the total is accurate
+
             }
-           // if(u1==11||u2==11)
-               // loopcheck=1;
+
             total = view.hitCards(user3,total);
             t=total;
-
-               // if (loopcheck==1&& total<21) {
-                  //  view.showTotal2(t, t - 10);
-                  //  if(check<21)
-                     //   loopcheck=0;
-                   // else
-                    //    loopcheck=2;
-               // }
-                //else
-                    view.showTotal(t);
+            view.showTotal(t);
 
         }
         else if(decis== 2){
@@ -175,7 +165,7 @@ public class Main {
     public static int dealerDeal(int total,int house1){
         CmdLineView view = new CmdLineView();
 
-        //check to see if hit card 11 changes
+
         int house2=deal();
         total+=house2;
         view.showHTotal(total,house2);
